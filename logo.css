@@ -36,3 +36,10 @@
     margin: 0 0 0 15px;
     font-size: 14px;
  }
+ .main {
+     text-align: center;
+ }
+ .main-text {
+     background-color: #69696969;
+     background-size: 100px;
+ }
