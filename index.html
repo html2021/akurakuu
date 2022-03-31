@@ -1,15 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script>
+        window.onload = function() {
+  var popup = document.getElementById('js-popup');
+  if(!popup) return;
+  popup.classList.add('is-show');
+
+  var blackBg = document.getElementById('js-black-bg');
+  var closeBtn = document.getElementById('js-close-btn');
+
+  closePopUp(blackBg);
+  closePopUp(closeBtn);
+
+  function closePopUp(elem) {
+    if(!elem) return;
+    elem.addEventListener('click', function() {
+      popup.classList.remove('is-show');
+    })
+  }
+}
+    </script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>akurakuu - home</title>
+    <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
     <link href="index.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
 </head>
 <body>
+    <div class="header">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7817765413680349"
      crossorigin="anonymous"></script>
     <header>
@@ -40,9 +63,15 @@
             <h3>これでおわりっす。</h3>
         </div>
     </div>
-    <div>
-        <!-- akurakuu非公式web受け入れ確認 -->
-        <p><a href="akurakuuweb.html"></a></p>
     </div>
+    <div class="popup" id="js-popup">
+        <div class="popup-inner">
+          <div class="close-btn" id="js-close-btn">
+              <i class="fas fa-times"></i>
+            </div>
+          <p>安倉空非公式サイトになっております</p>
+        </div>
+        <div class="black-background" id="js-black-bg"></div>
+      </div>
 </body>
 </html>
